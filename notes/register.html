@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+  </head>
+  <body>
+    <!-- div is used to group things into blocks -->
+    <div>
+      <!-- form method is GET by default -->
+      <form method="GET">
+        First Name: <input type="text" name="firstname" /><br />
+        Last Name: <input type="text" name="lastname" /><br />
+        Email: <input type="email" name="email" required /><br />
+        Password:
+        <input type="password" min="8" name="password" required /><br />
+        Birth Date: <input type="date" name="birthdate" /><br />
+        Gender:<br />
+        <input type="radio" name="gender" value="male" />Male<br />
+        <input type="radio" name="gender" value="female" />Female<br />
+        <input type="radio" name="gender" value="other" />Other<br />
+        Pets:<br />
+        <input type="checkbox" name="tortoise" /> Tortoise<br />
+        <input type="checkbox" name="dog" /> Dog<br />
+        <input type="checkbox" name="cate" /> Cat<br />
+        Cars: <br />
+        <select name="cars">
+          <option value="Ford" name="ford">Ford</option>
+          <option value="Toyota" name="toyota">Toyota</option>
+          <option value="Honda" name="honda">Honda</option></select
+        ><br />
+        <input type="submit" value="Register" />
+        <input type="reset" value="RESET" />
+      </form>
+    </div>
+    <!-- span is like div but with single lines -->
+    <span></span>
+  </body>
+</html>
