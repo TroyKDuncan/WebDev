@@ -10,7 +10,7 @@ so it is cascading down the sheet
 /* The * means ALL elements */
 * {
     text-align: right;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Roboto, 'Arial Narrow', Arial, sans-serif;
 }
 
 body {
@@ -18,20 +18,31 @@ body {
     background-size: cover;
 }
 
+img {
+    float: left;
+}
+
 h2, p {
     color: rgba(46, 64, 116);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* fonts go in order, meaning if the computer doesn't have the first one, it moves onto the
+    next font automatically */
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     font-size: xx-large;
-    font-weight: 300;
+    font-weight: 500;
     text-align: center;
     border: 1px solid rgba(46, 64, 116, .4);
     border-radius: 15px;
 }
 
+footer {
+    text-align: center;
+    clear: both;
+}
+
 .bodytext {
     border: none;
     font-size: large;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .active {
@@ -49,6 +60,7 @@ h2, p {
 
 #textsection {
     background-color: rgba(83, 125, 135, .25);
+    border-radius: 30px;
 }
 
 ul {
@@ -59,4 +71,15 @@ li {
     list-style: none;
     display: inline-block;
     padding-inline: 5px;
+}
+
+/* Box Model */
+
+.boxmodel {
+    border: 2px solid red;
+    display: inline-block;
+    /* top, right, bottom, left */
+    padding: 5px 10px 5px 10px;
+    /* top and bottom, left and right */
+    margin: 0px 10px;
 }
