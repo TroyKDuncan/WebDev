@@ -9,77 +9,67 @@ so it is cascading down the sheet
 
 /* The * means ALL elements */
 * {
-    text-align: right;
-    font-family: Roboto, 'Arial Narrow', Arial, sans-serif;
+  text-align: right;
+  font-family: Roboto, "Arial Narrow", Arial, sans-serif;
 }
 
 body {
-    background-image: url(backgroundimage.jpg);
-    background-size: cover;
+  background-image: url(backgroundimage.jpg);
+  background-size: cover;
 }
 
 img {
-    float: left;
+  float: left;
 }
 
-h2, p {
-    color: rgba(46, 64, 116);
-    /* fonts go in order, meaning if the computer doesn't have the first one, it moves onto the
+h2,
+p {
+  color: rgba(46, 64, 116);
+  /* fonts go in order, meaning if the computer doesn't have the first one, it moves onto the
     next font automatically */
-    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
-    font-size: xx-large;
-    font-weight: 500;
-    text-align: center;
-    border: 1px solid rgba(46, 64, 116, .4);
-    border-radius: 15px;
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-size: xx-large;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid rgba(46, 64, 116, 0.4);
+  border-radius: 15px;
 }
 
 footer {
-    text-align: center;
-    clear: both;
+  text-align: center;
+  clear: both;
 }
 
 .bodytext {
-    border: none;
-    font-size: large;
-    font-weight: 300;
+  border: none;
+  font-size: large;
+  font-weight: 300;
 }
 
 .active {
-    color: rgba(83, 125, 135, 1);
+  color: rgba(83, 125, 135, 1);
 }
 
 .hoverlink {
-    text-decoration: none;
-    color: rgba(20, 79, 93, 1);
+  text-decoration: none;
+  color: rgba(20, 79, 93, 1);
 }
 
 .hoverlink:hover {
-    color: rgba(172, 108, 55, 1);
+  color: rgba(172, 108, 55, 1);
 }
 
 #textsection {
-    background-color: rgba(83, 125, 135, .25);
-    border-radius: 30px;
+  background-color: rgba(83, 125, 135, 0.25);
+  border-radius: 30px;
 }
 
 ul {
-    cursor: default;
+  cursor: default;
 }
 
 li {
-    list-style: none;
-    display: inline-block;
-    padding-inline: 5px;
-}
-
-/* Box Model */
-
-.boxmodel {
-    border: 2px solid red;
-    display: inline-block;
-    /* top, right, bottom, left */
-    padding: 5px 10px 5px 10px;
-    /* top and bottom, left and right */
-    margin: 0px 10px;
+  list-style: none;
+  display: inline-block;
+  padding-inline: 5px;
 }
