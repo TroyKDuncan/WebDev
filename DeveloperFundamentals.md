@@ -19,4 +19,7 @@
 - Google as you go with the courses
 - Good developers look for and understand the why behind everything
 
-## 4. 
+## 4. Find Solutions that Already Exist
+
+- animate.style
+- creative tim
