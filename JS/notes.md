@@ -44,7 +44,7 @@
 ## 3. typecasting
 - Number(prompt()) converts the user input to a number
 
-```
+```js
 var first = Number(prompt("Enter the first number"));
 var second = Number(prompt("Enter the second number"));
 var sum = first + second;
@@ -63,3 +63,34 @@ alert("Sum is: " + sum);
 - ternary operator
 - switch
 
+# Functions
+
+## 1. Declaring functions
+```js
+function sayHello() {
+    console.log("Hello")
+}
+
+sayHello();
+```
+## 2. Assigning functions to a var
+```js
+var sayBye = function() {
+    console.log('Bye')
+}
+
+sayBye();
+```
+
+# Data Structures
+
+## 1. Arrays
+- how to declare an array
+```js
+var list = ["tiger","cat","bear","bird"];
+list[0]
+```
+- arrays can hold anything, including multiple types and/or functions
+```js
+var list = [1,2,"string", true, function()];
+```
