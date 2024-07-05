@@ -25,7 +25,14 @@
     - !
 
 ## 4. Undefined
-- when nothing is assigned to a variable, it is undefined
+- when nothing is assigned to a variable or object or array, it is undefined
+
+## 5. Objects
+- basically dictionaries in python
+- you can add functions as methods
+
+## 6. Null
+- 
 
 # Variables
 
@@ -94,3 +101,30 @@ list[0]
 ```js
 var list = [1,2,"string", true, function()];
 ```
+
+## 2. Objects
+- example:
+```js
+var user = {
+    name: "John",
+    age: 34,
+    hobby: "Soccer",
+    isMarried: false
+}
+```
+- basically a dictionary in python; key/value pairs
+- adding another value changing the value of an existing one:
+```js
+user.favoriteFood = "Sushi";
+user.isMarried = true;
+```
+- you can add functions to objects as well. These are also known as methods:
+```js
+user.shout = function() {
+    console.log("AHHHHH")
+}
+```
+
+# Loops
+
+## 1. 
