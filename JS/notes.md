@@ -127,4 +127,60 @@ user.shout = function() {
 
 # Loops
 
-## 1. 
+## 1. For loops
+- similar to C/C++ for syntax
+```js
+for (var i = 0; i < thing.length; i++) {
+    // do a thing
+}
+```
+
+## 2. While loops
+- same as C/C++ for syntax
+- doesn't have to execute at all if the boolean expression is false
+```js
+var count = 0;
+while (count < 10) {
+    // do a thing
+    count++;
+}
+```
+
+## 3. Do/While loops
+- same as in C/C++
+- will always execute at least once because it doesn't check until after running at least once
+```js
+var count = 10;
+do {
+    // do a thing
+    count--;
+} while (count > 0);
+```
+
+## 4. forEach loops
+- similar to python for loops
+- here is the syntax:
+```js
+list.forEach(function(i)) {
+    // do something with i
+}
+```
+- it takes a function as an argument
+- there is also a way to do something similar to enumerate:
+```js
+list.forEach(function(item, i)) {
+    console.log(item, i);
+}
+```
+- the above would print out each item (item) and its index (i)
+- you can also just use a function that is already declared:
+```js
+function printItem(item, i) {
+    console.log(item, i);
+}
+
+list.forEach(printItem);
+```
+- the above runs printItem on each item within the array (list)
+- very powerful and much more clean and straightforward
+- MAKE SURE IT WORKS ON ALL BROWSERS
