@@ -8,7 +8,8 @@
 
 ## 2. There are Multiple Browsers and Devices
 
-- One of the biggest challenges is making sure each browser and device displays things properly
+- One of the biggest challenges is making sure each browser and device displays 
+things properly
 - We have to test on everything
 - Luckily, there are tools that let us do this more easily
 
@@ -23,3 +24,7 @@
 
 - animate.style
 - creative tim
+
+## 5. Manipulating the DOM
+
+- manipulate the DOM as little as possible to maintain good performance

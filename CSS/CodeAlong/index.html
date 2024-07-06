@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My first website!</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- using fonts like this makes the website a bit slower -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <button class="btn btn-primary">Default</button>
+  <header>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li><a class="hoverlink" href="about.html">About</a></li>
+        <li><a class="hoverlink" href="login.html">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section>
+    <h2>Home</h2>
+    <img src="fish.png" height="500px">
+    <!-- IDs must be unique, while classes can be used for multiple elements -->
+    <div id="textsection">
+      <!-- a space in the class field means there are multiple classes; in this case the first one
+      has classes "bodytext" AND "active"  -->
+      <p class="bodytext active">Lorem ipsum.</p>
+      <p class="bodytext">Lorem ipsum.</p>
+      <p class="bodytext">Lorem ipsum.</p>
+    </div>
+  </section>
+  <footer>
+    Made with Big Love
+  </footer>
+</body>
+
+</html>

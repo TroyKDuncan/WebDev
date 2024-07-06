@@ -1,0 +1,75 @@
+/* 
+Selector {
+    Property: value;
+} 
+
+it's called cascading style sheets because it takes the last input for a selector and uses that,
+so it is cascading down the sheet
+*/
+
+/* The * means ALL elements */
+* {
+  text-align: right;
+  font-family: Roboto, "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  background-image: url(backgroundimage.jpg);
+  background-size: cover;
+}
+
+img {
+  float: left;
+}
+
+h2,
+p {
+  color: rgba(46, 64, 116);
+  /* fonts go in order, meaning if the computer doesn't have the first one, it moves onto the
+    next font automatically */
+  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+  font-size: xx-large;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid rgba(46, 64, 116, 0.4);
+  border-radius: 15px;
+}
+
+footer {
+  text-align: center;
+  clear: both;
+}
+
+.bodytext {
+  border: none;
+  font-size: large;
+  font-weight: 300;
+}
+
+.active {
+  color: rgba(83, 125, 135, 1);
+}
+
+.hoverlink {
+  text-decoration: none;
+  color: rgba(20, 79, 93, 1);
+}
+
+.hoverlink:hover {
+  color: rgba(172, 108, 55, 1);
+}
+
+#textsection {
+  background-color: rgba(83, 125, 135, 0.25);
+  border-radius: 30px;
+}
+
+ul {
+  cursor: default;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  padding-inline: 5px;
+}

@@ -1,0 +1,29 @@
+.boxmodel {
+  border: 2px solid red;
+  display: inline-block;
+  /* top, right, bottom, left */
+  padding: 5px 10px 5px 10px;
+  /* top and bottom, left and right */
+  margin: 0px 10px;
+  width: 12px;
+  height: 19px;
+  text-align: center;
+}
+
+p {
+  font-size: 20px;
+}
+
+span {
+  /* this means the size is 5 times the size of the containing element, which
+    in this case is a p with size 20px, making this 100px */
+  font-size: 5em;
+}
+
+h4 {
+  /* Rem (short for “root-em”) units dictate an element's font size relative to 
+  the size of the root element. By default, most browsers use a font size value 
+  of 16px. So, if the root element is 16px, an element with the value 1rem will 
+  also equal 16px. */
+  font-size: 3rem;
+}
