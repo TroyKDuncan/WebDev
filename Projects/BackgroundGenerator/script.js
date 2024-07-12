@@ -4,6 +4,7 @@ var color2 = document.querySelector(".color2");
 var body = document.querySelector("body");
 var randomize = document.querySelector(".random");
 
+// updates the background gradient and printed values
 function changeColor() {
   body.style.background =
     "linear-gradient(to right," + color1.value + ", " + color2.value + ")";
@@ -11,6 +12,7 @@ function changeColor() {
   css[1].textContent = "Right Color: " + color2.value;
 }
 
+// returns random hex color value
 function getRandomColor() {
   var letters = "0123456789ABCDEF";
   var color = "#";
@@ -20,6 +22,7 @@ function getRandomColor() {
   return color;
 }
 
+// assigns random values to both colors and then calls changeColor
 function randomizeColors() {
   color1.value = getRandomColor();
   color2.value = getRandomColor();
