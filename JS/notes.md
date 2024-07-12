@@ -469,6 +469,7 @@ const mapArray = array.map((num) => {
 
 - this is better than forEach because all forEach cares about is iterating over something
 - map forces you to return something, so it transforms something into something else
+- it returns an array
 - you can also shorthand it into this:
 
 ```js
@@ -624,40 +625,270 @@ let superClone = JSON.parse(JSON.stringify(obj));
 
 ```js
 let str = "helloooo";
-str.includes("o"); 
+str.includes("o");
 // returns true
 
 let arr = [1, 2, 3, 4];
-arr.includes(1); 
+arr.includes(1);
 // returns true
 ```
 
 - exponential operator
-- x**2 = x^2
-
+- x\*\*2 = x^2
 
 # ES8 (2017)
 
 - string padding
 - padStart(10) would add 10 spaces to the beginning of a string
 - padEnd(10) would add 10 spaces to the end of a string
- 
+
 ```js
-'tortoise'.padStart(10);
-'tortoise'.padEnd(10);
+"tortoise".padStart(10);
+"tortoise".padEnd(10);
 ```
 
 - trailing commas in a long parameter list won't cause errors:
 
 ```js
-let arr = [1,2,3,4,5,6,]
+let arr = [1, 2, 3, 4, 5, 6];
 ```
 
 - Object.values and Object.entries
 
 ```js
 let obj = {
-    1: 'a',
-    2: 'b',
-    3: 'c',
+  username1: "a",
+  username2: "b",
+  username3: "c",
+};
+
+// instead of this confusing mess:
+Object.keys(obj).forEach((key, index) => {
+  console.log(key, obj[key]);
+});
+
+// if you just want the values, you can do this:
+Object.values(obj).forEach((value) => {
+  console.log(value);
+});
+
+// this will give key/value pairs as lists:
+Object.entries(obj).forEach((entry) => {
+  console.log(entry);
+});
+
+// here is a usecase for it:
+Object.entries(obj).map((entry) => {
+  return entry[1] + entry[0].replace("username", "");
+});
+```
+
+# ES10 (2019)
+
+## flat()
+
+```js
+// this one doesn't do anything because it is already flat
+let array = [1, 2, 3, 4, 5];
+array.flat();
+
+// this one gets rid of the nested arrays and returns an array with all the values in it
+let array2 = [1, [2, 3], [4, 5]];
+array2.flat();
+
+// this will clean up empty entries
+let entries = ["bob", "sarah", , , , , "henry"];
+entries.flat();
+```
+
+- adding an int argument will increase the number of layers that it will flatten
+- flatMap() will flatten while also allow you to perform a function on each value
+
+## trimStart() and trimEnd()
+
+- these remove white spaces at the start or end of a string
+
+## fromEntries()
+
+- this turns your array of arrays into key/value pairs in an object
+- it is the opposite of Object.entries()
+
+```js
+let userProfiles = [
+  ["commanderTome", 23],
+  ["derekZlander", 40],
+];
+Object.fromEntries(userProfiles);
+```
+
+## try catch block updates
+
+- this works now:
+
+```js
+try {
+  bob + "hi";
+} catch {
+  console.log("whoops!");
 }
+```
+
+# Advanced Loops
+
+## FOR OF Loops
+
+- "for of" loops are basically better looking forEach loops
+- iterates over iterables
+- doesn't work with objects
+
+```js
+const basket = ["apples", "orange", "grapes"];
+
+for (item of basket) {
+  console.log(item);
+}
+```
+
+## FOR IN Loops
+
+- returns properties of objects
+- works with iterables because iterables are objects under the hood
+
+```js
+const detailedBasker = {
+  apples: 5,
+  oranges: 10,
+  grapes: 1000,
+};
+
+for (item in detailedBasket) {
+  console.log(item);
+}
+```
+
+# ES2020
+
+## BigInt
+
+- new type
+- used as as type for when we are using numbers bigger than Number.MAX_SAFE_INTEGER
+- specified with n at the end of a number:
+
+```js
+let num = 1n;
+```
+
+## Optional Chaining Operator ?.
+
+- this helps check each level to see if different things exist
+- basically saying "if this exists" over and over again and returns a value if it exists, otherwise it returns an undefined
+
+```js
+let will_pokemon = {
+  pikachu: {
+    species: "Mouse Pokemon",
+    height: 0.4,
+    weight: 6,
+  },
+};
+
+let weight = will_pokemon?.pikachu?.weight;
+console.log("weight:", weight);
+```
+
+## Nullish Coalescing Operator ??
+
+- in this one, power doesn't exist, so 'no power' is returned
+
+```js
+let will_pokemon = {
+  pikachu: {
+    species: "Mouse Pokemon",
+    height: 0.4,
+    weight: 6,
+  },
+};
+
+let weight = will_pokemon?.pikachu?.power || "no power";
+console.log("weight:", weight);
+```
+
+- in this example, power is empty, making it falsey, so 'no power' is returned again
+
+```js
+let will_pokemon = {
+  pikachu: {
+    species: "Mouse Pokemon",
+    height: 0.4,
+    weight: 6,
+    power: "",
+  },
+};
+
+let weight = will_pokemon?.pikachu?.power || "no power";
+console.log("weight:", weight);
+```
+
+- using nullish coalescing operator (??) makes it override falsey situations
+- this one would return 0, evn though it is falsey:
+
+```js
+let will_pokemon = {
+  pikachu: {
+    species: "Mouse Pokemon",
+    height: 0.4,
+    weight: 6,
+    power: 0,
+  },
+};
+
+let weight = will_pokemon?.pikachu?.power ?? "no power";
+console.log("weight:", weight);
+```
+
+# ES2021
+
+## replaceAll()
+
+- replaceAll replaces ALL the instances instead of just the first one
+- this returns 'i hate hate hate ztm'
+
+```js
+let str = "i love love love ztm";
+str = str.replaceAll("love", "hate");
+```
+
+# ES2022
+
+## at()
+
+- instead of this:
+
+```js
+const arr = [100, 200, 400, 50000, 10]
+arr.[arr.length - 2]
+```
+
+- now you can just do this:
+
+```js
+arr.at(-2);
+```
+
+# ES2023
+
+## findLast()
+
+```js
+const lastMonster = ztmMonsters.findLast((item) => item.level > 15);
+```
+
+- this returns the last monster in the array that is over level 15
+
+## findLastIndex()
+
+- does the same as findLast, but returns the index
+
+## toReversed(), toSorted(), toSpliced(), with()
+
+- returns things without modifying the original list
