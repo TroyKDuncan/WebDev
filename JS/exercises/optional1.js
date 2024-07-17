@@ -36,7 +36,7 @@
 
 const sortToArrays = (num, arr, answer) => {
   if (arr.length === 0) {
-    answer.push([num]);
+    answer.push(num);
     return answer;
   } else {
     let innerArr = [num];
