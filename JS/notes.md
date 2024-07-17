@@ -755,7 +755,7 @@ for (item of basket) {
 - works with iterables because iterables are objects under the hood
 
 ```js
-const detailedBasker = {
+const detailedBasket = {
   apples: 5,
   oranges: 10,
   grapes: 1000,
@@ -892,3 +892,28 @@ const lastMonster = ztmMonsters.findLast((item) => item.level > 15);
 ## toReversed(), toSorted(), toSpliced(), with()
 
 - returns things without modifying the original list
+
+# How JavaScript Works
+
+- programs have to allocate memory and then parse and execute instructions
+- it is a single threaded language with non-blocking memory
+- single threaded means it only has one call stack, so it is synchronous
+- non-blocking means we can make it asynchronous
+
+## JavaScript Engine
+
+- in Google Chrome, its called V8
+- there is a memory heap and a call stack
+- global variables are generally bad because they take space in the memory heap without cleaning themselves up (memory leaks)
+
+## Javascript Run-Time Environment
+
+- provided by browsers
+- consists of the call stack, web APIs (DOM, AJAX, TIMEOUT), callback queue and event loop
+- call stack is the same as before
+- if you use setTimeout(), it moves what's inside from the call stack to the web API stack and runs, then waits in the callback queue
+- the event loop waits for the call stack to finish, then sends things from the callback queue back to the call stack
+- It's kinda like if you have a question for someone
+  - the synchronous way to ask the question would be calling and waiting for them to pick up while you can't really do anything while you're waiting
+  - the asynchrnous way would be to send a text and go about your day and then when they are ready they will contact you
+
