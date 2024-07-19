@@ -1,9 +1,14 @@
+var _ = require('lodash/without')
+
+arr = [1,2,3,4,5,5,6,7]
+console.log("answer: ", _.without(arr, 5));
 var css = document.querySelectorAll("h3");
 var color1 = document.querySelector(".color1");
 var color2 = document.querySelector(".color2");
 var body = document.querySelector("body");
 var randomize = document.querySelector(".random");
 
+// updates the background gradient and printed values
 function changeColor() {
   body.style.background =
     "linear-gradient(to right," + color1.value + ", " + color2.value + ")";
@@ -11,6 +16,7 @@ function changeColor() {
   css[1].textContent = "Right Color: " + color2.value;
 }
 
+// returns random hex color value
 function getRandomColor() {
   var letters = "0123456789ABCDEF";
   var color = "#";
@@ -20,6 +26,7 @@ function getRandomColor() {
   return color;
 }
 
+// assigns random values to both colors and then calls changeColor
 function randomizeColors() {
   color1.value = getRandomColor();
   color2.value = getRandomColor();
