@@ -2,7 +2,7 @@ import React from "react";
 
 const Card = ({ name, email }) => {
   return (
-    <div className="bg-light-green dib br3 tc pa3 ma2 grow bw2 shadow-5">
+    <div className="ba b--white bw1 bg-light-green dib br4 tc pa1 ma2 grow shadow-5">
       <img alt="robot" src={`https://robohash.org/${name}?100x100`} />
       <div>
         <h2>{name}</h2>
