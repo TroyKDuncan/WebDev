@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/RoboFriends/static/css/main.8b5d4769.css",
+    "main.js": "/RoboFriends/static/js/main.0c28ca56.js",
+    "static/js/453.eceb90f9.chunk.js": "/RoboFriends/static/js/453.eceb90f9.chunk.js",
+    "static/media/Game Played.woff": "/RoboFriends/static/media/Game Played.39fb899834dc936b5b60.woff",
+    "index.html": "/RoboFriends/index.html",
+    "main.8b5d4769.css.map": "/RoboFriends/static/css/main.8b5d4769.css.map",
+    "main.0c28ca56.js.map": "/RoboFriends/static/js/main.0c28ca56.js.map",
+    "453.eceb90f9.chunk.js.map": "/RoboFriends/static/js/453.eceb90f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8b5d4769.css",
+    "static/js/main.0c28ca56.js"
+  ]
+}
