@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Game Played Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Game Played Regular"), url("Game Played.woff") format("woff");
+}
+
+h1 {
+  font-family: "Game Played Regular";
+  font-weight: 200;
+  color: aquamarine;
+}
