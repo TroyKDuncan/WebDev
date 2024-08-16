@@ -46,7 +46,7 @@ var myJSON = JSON.stringify(obj);
 
 # Promises
 
-- a promise is an object that may produce a single value sometime in the future; either a resololved value, or a reason that it's not resolved (rejected)
+- a promise is an object that may produce a single value sometime in the future; either a resolved value, or a reason that it's not resolved (rejected)
 - 3 possible states:
   - fulfilled
   - rejected
@@ -63,3 +63,8 @@ const promise = new Promise((resolve, reject) => {
 
 promise.then((result) => result + "!").then((result2) => console.log(result2));
 ```
+
+# APIs
+
+- like a server at a restaurant
+  - 
