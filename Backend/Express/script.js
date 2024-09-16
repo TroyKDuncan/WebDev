@@ -4,13 +4,12 @@ import fs from "fs";
 
 // Asynchronous
 fs.readFile("./hello.txt", (err, data) => {
-    console.time('timer')
+  console.time("timer");
   if (err) {
     console.log("ERROR");
   }
   console.log("Async", data.toString());
-  console.timeEnd('timer')
-
+  console.timeEnd("timer");
 });
 
 // Synchronous
@@ -34,5 +33,5 @@ fs.unlink("./bye.txt", (err) => {
   if (err) {
     console.log("ERROR");
   }
-  console.log('Inception');
+  console.log("Inception");
 });
