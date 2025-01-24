@@ -269,7 +269,7 @@ list.forEach(printItem);
 - new ways of declaring variables
 - var isn't really used anymore
 - var is function scoped, while let is block scoped
-- unlike var, let can be scoped withing an if block
+- unlike var, let can be scoped within an if block
 - const declares immutable variables that will throw errors if you try to change them
 - however, if you create a const object, you can reassign values inside of it and create new values. You just won't be able to assign the object itself to something other than an object
 
@@ -531,7 +531,7 @@ obj1.value = 15;
 
 - confused a lot with scope
 - scope is created with curly brackets
-- context tells you where we are withing the object
+- context tells you where we are within the object
 - keyword 'this' refers to whatever is to the left of the dot that you are in
 
 ```js
@@ -650,7 +650,7 @@ arr.includes(1);
 - trailing commas in a long parameter list won't cause errors:
 
 ```js
-let arr = [1, 2, 3, 4, 5, 6];
+let arr = [1, 2, 3, 4, 5, 6,];
 ```
 
 - Object.values and Object.entries
