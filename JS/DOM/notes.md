@@ -39,7 +39,7 @@ h1.className = "coolTitle"; // sets class attribute to "coolTitle"
 var li = document.querySelector("li");
 li.classList; // returns the list of classes in the class attribute
 li.classList.add("coolTitle"); // adds coolTitle to the list of classes
-li.classList.remove("coolTitle"); // removes coolTitle to the list of classes
+li.classList.remove("coolTitle"); // removes coolTitle from the list of classes
 li.classList.toggle("coolTitle"); // if it is in the classList, it removes it. if it is NOT in the
                                   // class list, it is added. useful for turning things on or off
 ```

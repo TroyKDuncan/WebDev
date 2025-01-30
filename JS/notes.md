@@ -916,4 +916,3 @@ const lastMonster = ztmMonsters.findLast((item) => item.level > 15);
 - It's kinda like if you have a question for someone
   - the synchronous way to ask the question would be calling and waiting for them to pick up while you can't really do anything while you're waiting
   - the asynchrnous way would be to send a text and go about your day and then when they are ready they will contact you
-

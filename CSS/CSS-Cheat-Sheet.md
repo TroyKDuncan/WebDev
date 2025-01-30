@@ -48,5 +48,4 @@ this is used with properties and overrides all properties for the whole page
 - Specificity
 the more specific something is, the more likely it is to win
 - Importance
-- Source Order
-- - if there are multiple sources, the last one wins
+- Source Order (if there are multiple sources, the last one wins)
