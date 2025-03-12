@@ -5,8 +5,8 @@ import { Component, input } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.css'],
 })
 export class PostComponent {
-  postImage = ''
+  postImage = input('');
 }

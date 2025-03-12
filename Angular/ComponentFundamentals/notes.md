@@ -43,3 +43,14 @@ ng generate component post
 
 - this automatically generates a folder with post.component.ts, post.component.html, post.component.css, and post.component.spec.ts
 
+# Inputs
+
+```ts
+import { input } from '@angular/core';
+...
+export class PostComponent {
+  postImage = input('');
+}
+```
+
+- this configures postImage as an input signal
