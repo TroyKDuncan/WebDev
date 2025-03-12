@@ -1,10 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-root',
+  // template: "<h1>Hello World</h1>",
+  standalone: true,
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  // styles: ["h1 { color: red; }"]
 })
 export class AppComponent {
-  title = 'basics';
+  name = signal('Nikola Tesla');
+  imageURL = signal(
+    'https://picsum.photos/id/237/200/300'
+  )
+
+  changeImage(e: KeyboardEvent) {
+    this.imageURL.set((e.target as HTMLInputElement).value);
+  }
+  getName() {
+    return this.name();
+  }
 }
