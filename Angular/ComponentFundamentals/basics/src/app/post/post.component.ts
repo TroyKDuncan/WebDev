@@ -1,11 +1,11 @@
 import { Component, input } from '@angular/core';
 
 @Component({
-  selector: 'app-post',
-  standalone: true,
-  imports: [],
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css'],
+    selector: 'app-post',
+    standalone: true,
+    imports: [],
+    templateUrl: './post.component.html',
+    styleUrls: ['./post.component.css']
 })
 export class PostComponent {
   postImage = input('');
