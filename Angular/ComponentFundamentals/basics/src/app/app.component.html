@@ -1,6 +1,13 @@
 <input (keyup)="changeImage($event)" [value]="imageURL()" />
 
-<app-post [postImage]="imageURL()"></app-post>
+<app-post
+  [postImage]="imageURL()"
+  [postName]="name()"
+  (imageSelected)="logImage($event)"
+></app-post>
+<!-- app-post comes from the post component's declaration in its @Component decorator -->
+<!-- [postImage] is the exact name of the input signal variable in the post component -->
+<!-- imageURL() passes the value of imageURL to postImage -->
 
 <p>{{ name().toUpperCase() }}</p>
 <p>{{ getName() }}</p>
